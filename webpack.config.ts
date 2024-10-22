@@ -29,6 +29,11 @@ export default (env: EnvVariables) => {
     ],
     module: {
       rules: [
+        //порядок важен
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
         {
           test: /\.tsx?$/,
           use: 'ts-loader',
