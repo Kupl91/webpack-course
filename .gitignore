@@ -1,0 +1,25 @@
+# Node.js modules
+node_modules/
+
+# Build output
+
+build/
+
+# Temporary files
+*.tmp
+*.log
+*.out
+
+
+
+# Environment variables
+.env
+
+
+
+# Yarn and NPM files
+
+package-lock.json
+
+# Webpack output
+*.bundle.js
