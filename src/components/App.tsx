@@ -15,18 +15,18 @@ const App = () => {
 
     const increment = () => setCount(prev => prev + 1)
 
-    TODO(3223432)
+    // TODO(3223432)
 
-    if(__PLATFORM__ === 'desktop') {
-      return <div>ISDESKTOPPLATFORM</div>
-    }
+    // if(__PLATFORM__ === 'desktop') {
+    //   return <div>ISDESKTOPPLATFORM</div>
+    // }
 
-    if(__PLATFORM__ === 'mobile') {
-      return <div>ISMOLIBLEPLATFORM</div>
-    }
-    if(__ENV__ === 'development') {
-      // addDevtools()
-    }
+    // if(__PLATFORM__ === 'mobile') {
+    //   return <div>ISMOLIBLEPLATFORM</div>
+    // }
+    // if(__ENV__ === 'development') {
+    //   // addDevtools()
+    // }
 
 
 
