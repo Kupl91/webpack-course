@@ -1,6 +1,9 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
+import { About } from './pages/About';
+import { Shop } from './pages/Shop';
+import { Suspense } from 'react';
 
 const root = document.getElementById('root');
 if (!root) {
@@ -13,8 +16,8 @@ const router = createBrowserRouter([
      path: "/", 
      element: <App />,
      children: [
-       { path: "about", element: <h1>About</h1> },
-       { path: "shop", element: <h1>Shop</h1> },
+       { path: "about", element: <Suspense fallback={"loading..."}><About/></Suspense> },
+       { path: "shop", element: <Suspense fallback={"loading..."}><Shop/></Suspense> },
      ] 
    }
 ]);
