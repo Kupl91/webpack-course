@@ -1,8 +1,9 @@
-import { Configuration, webpack } from "webpack";
+import { Configuration } from "webpack";
 import { BuildOptions } from "./types/types";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import path from "path";
+import webpack from 'webpack'
+
 
 export function buildPlugins({mode, paths}: BuildOptions): Configuration['plugins'] {
     const isDev = mode === 'development';
@@ -13,7 +14,7 @@ export function buildPlugins({mode, paths}: BuildOptions): Configuration['plugin
     ];
 
     if (isDev) {
-        
+        plugins.push(new webpack.ProgressPlugin())
     }
 
     if (isProd) {

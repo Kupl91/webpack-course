@@ -1,9 +1,9 @@
 //
 import path from 'path';
 import webpack from 'webpack'
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
+
+
 import { buildWebpack } from './config/build/buildWebpack';
 import { BuildMode, BuildPaths } from './config/build/types/types';
 
