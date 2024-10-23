@@ -6,7 +6,7 @@ import avatarJpg from '@/assets/Avatar.jpg'
 import Calendar from '@/assets/Calendar.svg'
 
 //treeshaking если не использовать todo
-function TODO() {
+function TODO(a: number) {
   console.log('TODO')
 }
 
@@ -15,7 +15,7 @@ const App = () => {
 
     const increment = () => setCount(prev => prev + 1)
 
-    TODO()
+    TODO(3223432)
 
     if(__PLATFORM__ === 'desktop') {
       return <div>ISDESKTOPPLATFORM</div>
