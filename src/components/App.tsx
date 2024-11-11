@@ -6,15 +6,21 @@ import avatarJpg from '@/assets/Avatar.jpg'
 import Calendar from '@/assets/Calendar.svg'
 
 //treeshaking если не использовать todo
-function TODO(a: number) {
-  console.log('TODO')
+function TODO() {
+  TODO2()
 }
 
+//treeshaking если не использовать todo
+function TODO2() {
+  throw new Error()
+}
 const App = () => {
     const [count, setCount] = useState<number>(0)
 
-    const increment = () => setCount(prev => prev + 1)
-
+    const increment = () =>{ 
+      //setCount(prev => prev + 1)
+    TODO()
+    }
     // TODO(3223432)
 
     // if(__PLATFORM__ === 'desktop') {
